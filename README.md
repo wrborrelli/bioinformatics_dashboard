@@ -1,7 +1,7 @@
 # Will Borrelli Teiko Technical 
 
 Code to create a database, run statistical analysis, and create an interactive web dashboard for bioinformatics data.
-![db_pic](dashboard_pic.png)
+![db_pic](teiko_dashboard_pic.png)
 
 ## Instructions
 The Makefile has several options:
