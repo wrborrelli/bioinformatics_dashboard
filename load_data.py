@@ -7,9 +7,8 @@ cur.execute("CREATE TABLE IF NOT EXISTS users (project TEXT, subject TEXT, condi
 
 with open('cell-count.csv', 'r') as f:
     reader = csv.reader(f)
-    next(reader)  # Skip the header row if present
+    next(reader)
     
-    # Use executemany for high performance
     cur.executemany("INSERT INTO users (project, subject, condition, age, sex, treatment, response, sample, sample_type, time_from_treatment_start, b_cell, cd8_t_cell, cd4_t_cell, nk_cell, monocyte) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", reader)
 
 conn.commit()

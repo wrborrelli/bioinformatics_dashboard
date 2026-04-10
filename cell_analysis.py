@@ -94,9 +94,7 @@ baseline = df[
 
 fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 
-# -----------------------
 # Samples per project
-# -----------------------
 counts = baseline["project"].value_counts()
 
 axes[0].bar(counts.index, counts.values)
@@ -105,9 +103,8 @@ axes[0].set_xlabel("Project")
 axes[0].set_ylabel("Count")
 axes[0].tick_params(axis='x', rotation=45)
 
-# -----------------------
+
 # Responders vs Non-Responders
-# -----------------------
 counts = baseline.drop_duplicates("subject")["response"].value_counts()
 
 axes[1].bar(counts.index, counts.values)
@@ -115,9 +112,7 @@ axes[1].set_title("Responders vs Non-Responders")
 axes[1].set_xlabel("Response")
 axes[1].set_ylabel("Subjects")
 
-# -----------------------
 # Sex distribution
-# -----------------------
 counts = baseline.drop_duplicates("subject")["sex"].value_counts()
 
 axes[2].bar(counts.index, counts.values)

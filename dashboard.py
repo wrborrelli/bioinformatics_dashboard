@@ -62,7 +62,6 @@ pvals = {}
 
 for i, cell in enumerate(cell_cols):
 
-    # Build long-form dataframe for Plotly
     plot_df = pd.DataFrame({
         "value": pd.concat([responders[cell], non_responders[cell]]),
         "response": (["Responder"] * len(responders)) +
@@ -73,7 +72,7 @@ for i, cell in enumerate(cell_cols):
         plot_df,
         x="response",
         y="value",
-        points="all",  # show individual samples
+        points="all",
         color="response",
         title=cell_cols_nice[i],
         labels={"value": "Relative frequency (%)"}
@@ -118,9 +117,7 @@ baseline = df[
 
 col1, col2, col3 = st.columns(3)
 
-# -----------------------
 # Samples per project
-# -----------------------
 with col1:
     st.subheader("Samples per Project")
 
@@ -143,9 +140,7 @@ with col1:
     st.plotly_chart(fig, use_container_width=True)
 
 
-# -----------------------
 # Responders
-# -----------------------
 with col2:
     st.subheader("Subjects: Responders vs Non-Responders")
 
@@ -170,9 +165,7 @@ with col2:
     st.plotly_chart(fig, use_container_width=True)
 
 
-# -----------------------
 # Sex
-# -----------------------
 with col3:
     st.subheader("Subjects: Male vs Female")
 
