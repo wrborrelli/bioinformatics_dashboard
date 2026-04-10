@@ -16,8 +16,8 @@ The Makefile has several options:
 - clean: cleans up created files
 
 ## Data Schema
-The data schema used has the following form:\\
-(project TEXT, subject TEXT, condition TEXT, age INTEGER, sex TEXT, treatment TEXT, response TEXT, sample TEXT, sample_type TEXT, time_from_treatment_start INTEGER, b_cell INTEGER, cd8_t_cell INTEGER, cd4_t_cell INTEGER, nk_cell INTEGER, monocyte INTEGER)\\
+The data schema used has the following form: (project TEXT, subject TEXT, condition TEXT, age INTEGER, sex TEXT, treatment TEXT, response TEXT, sample TEXT, sample_type TEXT, time_from_treatment_start INTEGER, b_cell INTEGER, cd8_t_cell INTEGER, cd4_t_cell INTEGER, nk_cell INTEGER, monocyte INTEGER).
+
 This schema loads the necessary fields in a very straightforward way that is amenable to both out of memory and in memory analysis. To scale to much larger data sets I would convert the smaller in memory tasks (using pandas) to exclusively SQLite3 out of memory tasks.
 
 ## Code Structure
