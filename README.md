@@ -1,4 +1,3 @@
-# Will Borrelli Teiko Technical 
 
 Code to create a database, run statistical analysis, and create an interactive web dashboard for bioinformatics data.
 ![db_pic](teiko_dashboard_pic.png)
